@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="cfd20e6d-cea8-4af8-b988-03d985728b74" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/9.0/project-config.xsd">
+  <name>sbt runner</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_1" name="compile test" type="SBT">
+        <parameters>
+          <param name="jvmArgs" value="-Xmx512m -XX:MaxPermSize=256m -XX:ReservedCodeCacheSize=128m" />
+          <param name="sbt.args" value="clean compile test" />
+          <param name="sbt.installationMode" value="auto" />
+          <param name="teamcity.step.mode" value="default" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="Pending_HttpsGithubComBurnashevaSbtExampleParadiseGit" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+
